@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英华逸游</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+        @media screen and (min-width:768px) {
+            body {
+                background-color: #dddddd;
+                background-image: url("img/back.png");
+            }
+            /* 黑色头部 */
+            .web-header {
+                width: 100%;
+                height: 46px;
+                background-color: black;
+                color: white;
+            }
+            .header {
+                margin-left: 62%;
+            }
+            /* 客服咨询图片 */
+            .web-header img {
+                height: 30px;
+                margin: 8px auto;
+                float: left;
+            }
+            /* 咨询电话 */
+            .web-header p {
+                width: 200px;
+                line-height: 46px;
+                font-size: 20px;
+                margin-left: 7px;
+                float: left;
+            }
+            /* 登录 注册 超链接 */
+            .web-header a {
+                text-decoration: none;
+                line-height: 46px;
+                color: white;
+                margin-left: 5px;
+                margin-right: 10px;
+            }
+            .web-header a:hover {
+                list-style: none;
+            }
+            /* 导航条部分 */
+            .web-navigation {
+                width: 100%;
+                height: 79px;
+            }
+            /* 导航<nav> */
+            .navbar-default {
+                width: 100%;
+                height: 79px;
+            }
+            /* logo图 */
+            .web-navigation img {
+                width: 180px;
+                height: 50px;
+                margin-left: 120px;
+                margin-right: 100px;
+                float: left;
+            }
+            /* 导航选项 */
+            .navbar-collapse {
+                float: left;
+            }
+            /* 导航选项链接 */
+            .web-navigation a {
+                font-size: 22px;
+            }
+            .navbar-nav li a:focus {
+                color: tomato;
+                border-bottom: 3px solid tomato;
+            }
+            /* 快速定制按钮 手机版显示 */
+            .button1 {
+                display: none;
+            }
+            /* 轮播图部分 */
+            .web-slideshow {
+                width: 100%;
+                height: 450px;
+            }
+            /* 背景图 */
+            .web-slideshow img {
+                width: 98%;
+                height: 445px;
+                position: absolute;
+            }
+            /* “悠游古欧洲 遍览德法瑞意” 标题 */
+            .nohide-tip {
+                font-size: 50px;
+                position: absolute;
+                color: #dfdfe1;
+                margin-left: 180px;
+                margin-top: 65px;
+            }
+            /* 分隔线1 电脑版显示 */
+            .line1 {
+                width: 320px;
+                height: 1px;
+                margin-top: 150px;
+                margin-left: 180px;
+                background-color: #666467;
+                position: absolute;
+            }
+            /* “巴黎卢浮宫、塞纳河游船、凡尔赛宫 少女峰、大运河游船、金色列车、西庸城堡”  内容1 电脑版显示 */
+            .nohide-text1 {
+                font-size: 22px;
+                position: absolute;
+                color: #e2e0e1;
+                margin-left: 180px;
+                margin-top: 170px;
+            }
+            /* “全程升级热早+1晚五星酒店” 内容2 手机版显示 */
+            .nohide-text2 {
+                display: none;
+            }
+            /* 分隔线2 电脑版显示 */
+            .line2 {
+                width: 405px;
+                height: 1px;
+                margin-top: 260px;
+                margin-left: 180px;
+                background-color: #666467;
+                position: absolute;
+            }
+            /* 搜索框 */
+            .nohide-search {
+                width: 600px;
+                height: 60px;
+                position: absolute;
+                margin-top: 330px;
+                margin-left: 440px;
+                padding: 0px;
+                border: 5px rgba(25, 19, 43, 0.8) solid;
+                border-radius: 5px;
+            }
+            /* 搜索框表单 */
+            /* .form {
+                width: 600px;
+            } */
+            /* 目的地部部分 */
+            .position {
+                width: 25%;
+                height: 50px;
+                float: left;
+                background-color: #d4d3d9;
+                border-radius: 5px 0px 0px 5px;
+            }
+            /* 目的地图片 */
+            .position img {
+                width: 20px;
+                height: 26px;
+                margin: 12px 20px 12px 20px;
+                float: left;
+            }
+            /* 目的地文字 */
+            .position p {
+                font-size: 21px;
+                line-height: 50px;
+                margin-left: 50px;
+                color: #545454;
+                float: left;
+            }
+            /* 搜索内容框 */
+            .search {
+                margin-right: 0px;
+            }
+            input.form-control {
+                width: 50%;
+                height: 50px;
+                border-radius: 0px;
+                float: left;
+                font-size: 20px;
+            }
+            /* 搜索按钮 */
+            .button2 {
+                width: 25%;
+                height: 50px;
+                border: 0px;
+                float: left;
+                background-color: #cc5505;
+                padding: 0px;
+                border-radius: 0px 5px 5px 0px;
+            }
+            /* 搜索图片 */
+            .button2 img {
+                width: 40px;
+                height: 40px;
+                margin-top: -19px;
+                margin-left: -15px;
+            }
+            /* 服务部分 */
+            .web-main-serve {
+                width: 90%;
+                height: 400px;
+                margin: 0px auto;
+                margin-top: 20px;
+            }
+            /* 服务 */
+            .serve-left {
+                width: 80%;
+                height: 400px;
+                float: left;
+            }
+            /* 服务背景图片 电脑版显示*/
+            .serve-back {
+                width: 70.6%;
+                height: 400px;
+                position: absolute;
+            }
+            /* 车图片H 手机版显示 */
+            .car2 {
+                display: none;
+            }
+            /* 文字盒子 */
+            .sever-left-text {
+                margin-top: 30px;
+                margin-left: 40%;
+                position: absolute;
+            }
+            /* 服务文字 "机场接送 省钱省心" 电脑版显示 */
+            .serve-tip1 {
+                font-size: 40px;
+                color: #f5f5f5;
+            }
+            /* 服务文字 "机场接送 省心省力" 手机版显示 */
+            .serve-tip2 {
+                display: none;
+            }
+            /* "提供上海、苏州、无锡各市   往返机场、码头接送服务、更有包车服务" */
+            .serve-text {
+                font-size: 20px;
+                color: #e1e1e1;
+            }
+            /* 按钮3 查看详情 手机版显示 */
+            .button3 {
+                display: none;
+            }
+            /* 服务右侧  电脑版显示 */
+            .serve-right {
+                width: 20%;
+                height: 400px;
+                background-color: #14316d;
+                float: left;
+            }
+            /* 车图片 电脑版显示 */
+            .car1 img {
+                width: 106px;
+                height: 107px;
+                margin-top: 75px;
+                margin-left: 83px;
+                position: absolute;
+            }
+            /* 车辆接送文字 电脑版显示 */
+            .jiesong {
+                font-size: 30px;
+                position: absolute;
+                text-align: center;
+                margin-top: 200px;
+                margin-left: 75px;
+                color: #e1e1e1;
+            }
+            /* 按钮4 查看详情 电脑版显示 */
+            .button4 {
+                width: 160px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 25px;
+                position: absolute;
+                background-color: #14316d;
+                border: 1px solid #e1e1e1;
+                border-radius: 6px;
+                color: #e1e1e1;
+                margin-top: 300px;
+                margin-left: 50px;
+            }
+            /* 热门线路部分 */
+            .web-main-hotline {
+                width: 90%;
+                margin: 0px auto;
+                margin-top: 50px;
+                height: 1100px;
+            }
+            /* 热门线路标题1 电脑版显示 */
+            .hotline-tip1 {
+                margin: 0px auto;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            /* 标题1 中文 */
+            .hotline-tip1-C {
+                font-size: 35px;
+                line-height: 35px;
+            }
+            /* 标题1 英文 */
+            .hotline-tip1-E {
+                font-size: 15px;
+                line-height: 15px;
+            }
+            /* 热门线路标题2 手机版显示 */
+            .hotline-tip2 {
+                display: none;
+            }
+            /* 热门路线 左 */
+            .hotline-left {
+                margin-left: -15px;
+                margin-right: 2px;
+            }
+            /* 热门线路 海南 */
+            .Hainan {
+                margin-bottom: 5px;
+            }
+            .Hainan img {
+                width: 104%;
+                height: 382px;
+            }
+            /* 热门线路 欧洲 */
+            .Europe {
+                margin-bottom: 5px;
+            }
+            .Europe img {
+                width: 104%;
+                height: 383px;
+            }
+            /* 热门路线 右 电脑版显示 */
+            .hotline-right {
+                margin-right: -15px;
+                margin-left: 2px;
+            }
+            /* 热门线路 曼谷 */
+            .Bangkok {
+                margin-bottom: 5px;
+            }
+            .Bangkok img {
+                width: 104%;
+                height: 320px;
+            }
+            /* 热门线路 日本 */
+            .Japan {
+                margin-bottom: 5px;
+            }
+            .Japan img {
+                width: 104%;
+                height: 320px;
+            }
+            /* 热门线路 斯里兰卡 */
+            .Sri-Lanka {
+                margin-bottom: 5px;
+            }
+            .Sri-Lanka img {
+                width: 104%;
+                height: 320px;
+            }
+            /* 12文字显示块 */
+            .HOT1 {
+                width: 104%;
+                height: 100px;
+                background-color: #000000;
+                color: #fefefe;
+                padding-left: 30px;
+                padding-top: 20px;
+            }
+            /* 345文字显示块 */
+            .HOT2 {
+                width: 99.3%;
+                height: 80px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fefefe;
+                position: absolute;
+                margin-top: -80px;
+                padding-left: 30px;
+                padding-top: 15px;
+            }
+            /* 普通文字 */
+            .hot-text1 .hot-text11 {
+                font-size: 16px;
+                line-height: 18px;
+            }
+            /* 手机版显示 */
+            .hot-text12 {
+                display: none;
+            }
+            .hot-text2 {
+                font-size: 16px;
+                line-height: 22px;
+                float: left;
+            }
+            /* 价格文字 */
+            .price {
+                font-size: 22px;
+                line-height: 22px;
+                float: left;
+            }
+            /* 查看更多按钮 手机版显示 */
+            .button5 {
+                display: none;
+            }
+            /* 使命与愿景部分 */
+            .web-main-hope {
+                width: 90%;
+                margin-top: 50px;
+                margin: 0px auto;
+            }
+            /* 使命与愿景 标题1 电脑版显示 */
+            .hope-tip1 {
+                margin: 0px auto;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            /* 标题1 主标题 */
+            .hope-tip1-C {
+                font-size: 35px;
+                line-height: 35px;
+            }
+            /* 标题1 副标题 */
+            .hope-tip1-f {
+                font-size: 15px;
+                line-height: 15px;
+            }
+            /* 使命与愿景 标题2 手机版显示 */
+            .hope-tip2 {
+                display: none;
+            }
+            /* 愿景 英华逸游img */
+            .hope-img {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+            .hope-img img {
+                width: 100%;
+                height: 350px;
+            }
+            /* 理念 */
+            .hope-linian {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+            .linian {
+                background-color: rgba(28, 80, 128, 0.9);
+                height: 350px;
+                width: 108%;
+                padding-top: 90px;
+            }
+            /* 理念 标题1 电脑版显示 */
+            .linian-tip1 {
+                font-size: 20px;
+                text-align: center;
+                line-height: 20px;
+                color: #fffeff;
+            }
+            /* 理念 标题2 手机版显示 */
+            .linian-tip2 {
+                display: none;
+            }
+            /* 理念 内容 */
+            .linian-text {
+                width: 530px;
+                font-size: 17px;
+                color: #fffeff;
+                margin: 0px auto;
+                margin-top: 40px;
+            }
+            /* 合照 */
+            .hezhao {
+                width: 100%;
+                height: 475px;
+                margin-top: 5px;
+            }
+            /* 优势部分 */
+            .hope-youshi {
+                width: 100%;
+                height: 400px;
+                background-color: #1c5080;
+                margin-top: 5px;
+            }
+            /* 标题 手机版显示 */
+            .youshi-tip {
+                display: none;
+            }
+            /* 优势123 */
+            .youshi1 {
+                float: left;
+                width: 25%;
+                height: 400px;
+                margin-left: 8%;
+            }
+            .youshi2 {
+                float: left;
+                width: 25%;
+                height: 400px;
+                margin-left: 4%;
+            }
+            .youshi3 {
+                float: left;
+                width: 25%;
+                height: 400px;
+                margin-left: 4%;
+            }
+            /* 优势 圈圈图 */
+            .youshi-img {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                margin-top: 3%;
+                margin-left: 4%;
+            }
+            /* 圈圈内的内容 */
+            .youshi-imgt {
+                position: absolute;
+                margin-top: 6%;
+                margin-left: 8%;
+            }
+            /* 圈圈内 图1 */
+            .youshi-imgt .img1 {
+                width: 75px;
+                height: 75px;
+                margin-left: 6%;
+            }
+            /* 圈圈内 图2 */
+            .youshi-imgt .img2 {
+                display: none;
+            }
+            /* 圈圈内 文字标题 电脑版显示 */
+            .youshi-imgt p {
+                font-size: 22px;
+                margin-top: 5px;
+                color: #fffefc
+            }
+            /* 优势文字内容 */
+            .youshi-text {
+                text-align: center;
+                margin-top: 80%;
+                color: #ffffff;
+            }
+            /* 优势 文字1 */
+            .youshi-t1 {
+                font-size: 15px;
+            }
+            /* 优势 文字2 手机版显示 */
+            .youshi-t2 {
+                display: none;
+            }
+            .hope-youshi span {
+                display: none;
+            }
+            /* 底部1 电脑版显示 */
+            .web-bottom1 {
+                width: 100%;
+                height: 500px;
+                background-color: #000000;
+                padding-top: 50px;
+            }
+            .bottomr {
+                margin-left: 5%;
+            }
+            .web-bottom1 p {
+                font-size: 18px;
+                float: left;
+                color: #cdcdcd;
+                margin-left: 8%;
+                margin-right: 2%;
+            }
+            .web-bottom1 a {
+                text-decoration: none;
+                margin-left: 1%;
+                color: #cdcdcd;
+                font-size: 14px;
+                line-height: 18px;
+            }
+            .partner {
+                width: 100%;
+                height: 100px;
+            }
+            .partner img {
+                width: 100px;
+                height: 50px;
+            }
+            .partner a {
+                margin-left: 15%;
+                text-align: center;
+            }
+            .hotplace {
+                width: 100%;
+                height: 70px;
+            }
+            .mainserve {
+                width: 100%;
+                height: 70px;
+            }
+            .blogroll {
+                width: 100%;
+                height: 70px;
+            }
+            .wang {
+                float: left;
+                width: 8%;
+                margin-left: 1%;
+            }
+            .web-bottom1 span {
+                width: 100%;
+                height: 2px;
+                display: inline-block;
+                margin-top: 5px;
+                background-color: #404040;
+            }
+            .banquan {
+                margin-top: 30px;
+                margin-left: 36%;
+                font-size: 18px;
+                color: #ffffff;
+            }
+            /* 底部2 手机版显示 */
+            .web-bottom2 {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width:768px) {
+            body {
+                background-color: #f5f5f5;
+            }
+            /* 黑色头部 电脑版显示 */
+            .web-header {
+                display: none;
+            }
+            /* 导航条部分 */
+            .web-navigation {
+                width: 100%;
+                height: 100px;
+            }
+            /* 导航<nav> */
+            .navbar-default {
+                background-color: white;
+                border: 0px;
+            }
+            /* logo图 */
+            .web-navigation img {
+                width: 150px;
+                height: 50px;
+                margin-top: 20px;
+                margin-left: 40px;
+                margin-bottom: 20px;
+                float: left;
+            }
+            /* 快速定制按钮 手机版显示 */
+            .button1 {
+                height: 50px;
+                width: 150px;
+                font-size: 20px;
+                color: white;
+                margin-left: 43%;
+                margin-top: 20px;
+                background-color: tomato;
+                border-radius: 7px;
+                border: 0px;
+            }
+            /* 导航扩展 汉堡按钮 手机版显示 */
+            .navbar-toggle {
+                border: 0px;
+                margin-top: 25px;
+            }
+            /* 导航选项 */
+            .navbar-collapse {
+                float: right;
+                width: 300px;
+                background-color: whitesmoke;
+                border-radius: 5px;
+            }
+            /* 轮播图部分 */
+            .web-slideshow {
+                width: 100%;
+                height: 400px;
+            }
+            /* 背景图 */
+            .web-slideshow img {
+                width: 96%;
+                height: 365px;
+                position: absolute;
+            }
+            /* “悠游古欧洲 遍览德法瑞意” 标题 */
+            .nohide-tip {
+                font-size: 45px;
+                position: absolute;
+                color: #dfdfe1;
+                margin-left: 8%;
+                margin-top: 65px;
+            }
+            /* 分隔线1 电脑版显示 */
+            .line1 {
+                display: none;
+            }
+            /* “巴黎卢浮宫、塞纳河游船、凡尔赛宫 少女峰、大运河游船、金色列车、西庸城堡”  内容1 电脑版显示 */
+            .nohide-text1 {
+                display: none;
+            }
+            /* “全程升级热早+1晚五星酒店” 内容2 手机版显示 */
+            .nohide-text2 {
+                font-size: 25px;
+                position: absolute;
+                color: #e2e0e1;
+                margin-left: 8%;
+                margin-top: 150px;
+            }
+            /* 分隔线2 电脑版显示 */
+            .line2 {
+                display: none;
+            }
+            /* 搜索框 */
+            .nohide-search {
+                width: 80%;
+                height: 70px;
+                position: absolute;
+                margin-top: 260px;
+                margin-left: 10%;
+                padding: 0px;
+                border: 5px rgba(25, 19, 43, 0.8) solid;
+                border-radius: 5px;
+            }
+            /* 搜索框表单 */
+            /* .form {
+                width: 600px;
+            } */
+            /* 目的地部部分 */
+            .position {
+                width: 25%;
+                height: 60px;
+                float: left;
+                background-color: #d4d3d9;
+                border-radius: 5px 0px 0px 5px;
+            }
+            /* 目的地图片 */
+            .position img {
+                width: 3.5%;
+                height: 40%;
+                margin: 3% 4%;
+                float: left;
+            }
+            /* 目的地文字 */
+            .position p {
+                font-size: 20px;
+                line-height: 60px;
+                margin-left: 55px;
+                color: #545454;
+                float: left;
+            }
+            /* 搜索内容框 */
+            .search {
+                margin-right: 0px;
+            }
+            input.form-control {
+                width: 50%;
+                height: 60px;
+                border-radius: 0px;
+                float: left;
+                font-size: 20px;
+            }
+            /* 搜索按钮 */
+            .button2 {
+                width: 25%;
+                height: 60px;
+                border: 0px;
+                float: left;
+                background-color: #cc5505;
+                padding: 0px;
+                border-radius: 0px 5px 5px 0px;
+            }
+            /* 搜索图片 */
+            .button2 img {
+                width: 40px;
+                height: 40px;
+                margin-top: -19px;
+                margin-left: -15px;
+            }
+            /* 服务部分 */
+            .web-main-serve {
+                width: 100%;
+                height: 200px;
+                margin: 0px auto;
+                background-color: #ffffff;
+            }
+            /* 服务 */
+            .serve-left {
+                width: 100%;
+                height: 200px;
+                float: left;
+            }
+            /* 服务背景图片 电脑版显示*/
+            .serve-back {
+                display: none;
+            }
+            /* 车图片H 手机版显示 */
+            .car2 {
+                width: 100px;
+                height: 97px;
+                margin-top: 50px;
+                margin-left: 40px;
+                position: absolute;
+            }
+            /* 文字盒子 */
+            .sever-left-text {
+                margin-top: 40px;
+                margin-left: 25%;
+                position: absolute;
+            }
+            /* 服务文字 "机场接送 省钱省心" 电脑版显示 */
+            .serve-tip1 {
+                display: none;
+            }
+            /* 服务文字 "机场接送 省心省力" 手机版显示 */
+            .serve-tip2 {
+                color: #1b517f;
+                font-size: 35px;
+            }
+            /* "提供上海、苏州、无锡各市   往返机场、码头接送服务、更有包车服务" */
+            .serve-text {
+                font-size: 17px;
+                color: #666666;
+            }
+            /* 按钮3 查看详情 手机版显示 */
+            .button3 {
+                width: 165px;
+                height: 55px;
+                line-height: 55px;
+                font-size: 25px;
+                position: absolute;
+                background-color: #ffffff;
+                border: 1px solid #b5b5b5;
+                border-radius: 6px;
+                color: #676767;
+                margin-top: 75px;
+                margin-left: 70%;
+            }
+            /* 服务右侧  电脑版显示 */
+            .serve-right {
+                display: none;
+            }
+            /* 热门线路部分 */
+            .web-main-hotline {
+                width: 100%;
+                height: 1000px;
+                margin-top: 20px;
+                background-color: #ffffff;
+                padding-top: 20px;
+            }
+            /* 热门线路标题1 电脑版显示 */
+            .hotline-tip1 {
+                display: none;
+            }
+            /* 热门线路标题2 手机版显示 */
+            .hotline-tip2 {
+                margin-top: 10px;
+                margin-left: 7%;
+            }
+            /* 标题2 竖线| */
+            .hotline-tip2 span {
+                height: 35px;
+                width: 4px;
+                background-color: #cc5505;
+                float: left;
+            }
+            /* 标题2 文字 */
+            .hotline-tip2 p {
+                font-size: 30px;
+                float: left;
+                margin-left: 2%;
+            }
+            /* 标题2 分隔线 */
+            .hotline-tip2 div {
+                width: 93%;
+                height: 2px;
+                background-color: #f5f5f5;
+                float: left;
+                margin-bottom: 20px;
+                margin-top: -2px;
+            }
+            /* 热门路线 左 */
+            .hotline-left {
+                margin-left: 5%;
+            }
+            /* 热门线路 海南 */
+            .Hainan {
+                margin-bottom: 5px;
+            }
+            .Hainan img {
+                width: 90%;
+                height: 382px;
+            }
+            /* 热门线路 欧洲 */
+            .Europe {
+                margin-bottom: 5px;
+            }
+            .Europe img {
+                width: 90%;
+                height: 383px;
+            }
+            /* 热门路线 右 电脑版显示 */
+            .hotline-right {
+                display: none;
+            }
+            /* 12文字显示块 */
+            .HOT1 {
+                width: 86.2%;
+                height: 100px;
+                background-color: rgba(0, 0, 0, 0.7);
+                color: #fefefe;
+                padding-left: 30px;
+                padding-top: 20px;
+                position: absolute;
+                margin-top: -100px;
+            }
+            /* 普通文字 */
+            .hot-text1 {
+                font-size: 16px;
+                line-height: 18px;
+            }
+            .hot-text12 {
+                float: left;
+                width: 50%;
+                margin-right: 20%;
+                font-size: 20px;
+            }
+            /* 电脑版显示 */
+            .hot-text11 {
+                display: none;
+            }
+            .hot-text2 {
+                margin-top: 25px;
+                font-size: 16px;
+                line-height: 30px;
+                float: left;
+            }
+            /* 价格文字 */
+            .price {
+                margin-top: 20px;
+                font-size: 30px;
+                line-height: 30px;
+                float: left;
+            }
+            /* 查看更多按钮 手机版显示 */
+            .button5 {
+                height: 50px;
+                width: 25%;
+                margin-top: 900px;
+                margin-left: 12%;
+                border-radius: 5px;
+                border: 1px solid #666666;
+                background-color: #ffffff;
+            }
+            .button5 p {
+                font-size: 20px;
+                color: #666666;
+                float: left;
+                line-height: 50px;
+                margin-left: 30px;
+            }
+            .button5 img {
+                float: left;
+                width: 10px;
+                height: 20px;
+                margin-top: 15px;
+                margin-left: 10px;
+            }
+            /* 使命与愿景部分 */
+            .web-main-hope {
+                width: 100%;
+                height: 1650px;
+                margin-top: 20px;
+                background-color: #ffffff;
+                padding-top: 20px;
+            }
+            /* 使命与愿景 标题1 电脑版显示 */
+            .hope-tip1 {
+                display: none;
+            }
+            /* 使命与愿景 标题2 手机版显示 */
+            .hope-tip2 {
+                margin-top: 10px;
+                margin-left: 7%;
+            }
+            /* 标题2 竖线| */
+            .hope-tip2 span {
+                height: 35px;
+                width: 4px;
+                background-color: #cc5505;
+                float: left;
+            }
+            /* 标题2 大标题 */
+            .hope-tip2>.p1 {
+                font-size: 30px;
+                line-height: 30px;
+                float: left;
+                margin-left: 2%;
+            }
+            /* 标题2 小标题 */
+            .hope-tip2>.p2 {
+                font-size: 20px;
+                line-height: 30px;
+                float: left;
+            }
+            /* 标题2 分隔线 */
+            .hope-tip2 div {
+                width: 93%;
+                height: 2px;
+                background-color: #f5f5f5;
+                float: left;
+                margin-bottom: 20px;
+                margin-top: 2px;
+            }
+            /* 愿景 英华逸游img */
+            .hope-img {
+                margin-left: 30px;
+                background-image: url("img/back.png");
+            }
+            .hope-img img {
+                width: 100%;
+                height: 300px;
+            }
+            /* 理念 */
+            .hope-linian {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+            .linian {
+                height: 250px;
+                width: 100%;
+                padding-top: 30px;
+            }
+            /* 理念 标题1 电脑版显示 */
+            .linian-tip1 {
+                display: none;
+            }
+            /* 理念 标题2 手机版显示 */
+            .linian-tip2 {
+                font-size: 22px;
+                text-align: center;
+                line-height: 20px;
+                color: #000000;
+            }
+            /* 理念 内容 */
+            .linian-text {
+                width: 90%;
+                font-size: 19px;
+                line-height: 25px;
+                color: #000000;
+                margin-top: 30px;
+                margin-left: 50px;
+            }
+            /* 合照 */
+            .hezhao {
+                width: 90%;
+                height: 350px;
+                margin-top: 5px;
+                margin-left: 35px;
+            }
+            /* 优势部分 */
+            .hope-youshi {
+                width: 90%;
+                height: 600px;
+                margin-top: 50px;
+                margin-left: 35px;
+            }
+            /* 标题 手机版显示 */
+            .youshi-tip {
+                font-size: 22px;
+                text-align: center;
+                line-height: 20px;
+                color: #000000;
+            }
+            /* 优势123 */
+            .youshi1 {
+                width: 90%;
+                height: 150px;
+                margin-top: 10px;
+                float: left;
+            }
+            .youshi2 {
+                width: 90%;
+                height: 150px;
+                margin-top: 10px;
+                float: left;
+            }
+            .youshi3 {
+                width: 90%;
+                height: 150px;
+                margin-top: 10px;
+                float: left;
+            }
+            /* 优势 圈圈图 */
+            .youshi-img {
+                display: none;
+            }
+            /* 圈圈内的内容 */
+            .youshi-imgt {
+                margin-top: 30px;
+                margin-left: 80px;
+                float: left;
+            }
+            /* 圈圈内 图1 */
+            .youshi-imgt .img1 {
+                display: none;
+            }
+            /* 圈圈内 图2 */
+            .youshi-imgt .img2 {
+                width: 75px;
+                height: 75px;
+            }
+            /* 圈圈内 文字标题 电脑版显示 */
+            .youshi-imgt p {
+                display: none;
+            }
+            /* 优势文字内容 */
+            .youshi-text {
+                text-align: left;
+                margin-top: 30px;
+                color: #000000;
+                float: left;
+                font-size: 19px;
+                margin-left: 60px;
+                line-height: 20px;
+            }
+            .youshi2 .youshi-text {
+                margin-top: 50px;
+            }
+            .youshi3 .youshi-text {
+                margin-top: 50px;
+            }
+            .hope-youshi span {
+                width: 93%;
+                height: 2px;
+                background-color: #f5f5f5;
+                float: left;
+                margin-top: 2px;
+                margin-left: 5px;
+            }
+            /* 底部1 电脑版显示 */
+            .web-bottom1 {
+                display: none;
+            }
+            /* 底部2 手机版显示 */
+            .web-bottom2 {
+                width: 100%;
+                height: 300px;
+                background-color: #000000;
+                color: #ffffff;
+                text-align: center;
+                font-size: 20px;
+                line-height: 20px;
+                padding-top: 120px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container-fluid">
+        <div class="web-header">
+            <div class="header">
+                <img src="img/tell.png" alt="" />
+                <p>400-808-8682</p>
+                <a href="#">请登录</a> |
+                <a href="#">注册</a>
+            </div>
+        </div>
+
+        <div class="web-navigation">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <img src="img/logo.png" alt="" />
+                    <button type="button" class="button1">快速定制</button>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#col-1">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="col-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">首页</a></li>
+                            <li><a href="#">热门路线</a></li>
+                            <li><a href="#">签证推荐</a></li>
+                            <li><a href="#">使命愿景</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="web-slideshow">
+            <img src="img/banner.jpg" alt="" />
+            <div class="nohide-tip">
+                <p>悠游古欧洲&nbsp&nbsp遍览德法瑞意</p>
+            </div>
+            <div class="line1"></div>
+            <div class="nohide-text1">
+                <p>巴黎卢浮宫、塞纳河游船、凡尔赛宫</p>
+                <p>少女峰、大运河游船、金色列车、西庸城堡</p>
+            </div>
+            <div class="nohide-text2">
+                <p>全程升级热早+1晚五星酒店</p>
+            </div>
+            <div class="line2"></div>
+            <div class="nohide-search">
+                <form class="form">
+                    <div class="position">
+                        <img src="img/position.png" alt="" />
+                        <p>目的地</p>
+                    </div>
+                    <input type="text" class="form-control" placeholder="  日本   美国   英国   地中海" class="search">
+                    <button type="submit" class="button2">
+                        <img src="img/search.png" alt="" />
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="web-main-serve">
+            <div class="serve-left">
+                <img src="img/carH.png" alt="" class="car2" />
+                <img src="img/Sbanner2.jpg" alt="" class="serve-back" />
+                <div class="sever-left-text">
+                    <p class="serve-tip1">机场接送 省钱省心</p>
+                    <p class="serve-tip2">机场接送 省心省力</p>
+                    <div class="serve-text">
+                        <p>提供上海、苏州、无锡各市</p>
+                        <p>往返机场、码头接送服务、更有包车服务</p>
+                    </div>
+                </div>
+                <button class="button3">查看详情</button>
+            </div>
+            <div class="serve-right">
+                <div class="car1">
+                    <img src="img/car.png" alt="" />
+                </div>
+                <p class="jiesong">车辆接送</p>
+                <button class="button4">查看详情</button>
+            </div>
+        </div>
+
+        <div class="web-main-hotline">
+            <div class="hotline-tip1">
+                <p class="hotline-tip1-C">热 门 线 路</p>
+                <p class="hotline-tip1-E">Popular tourist routes</p>
+            </div>
+            <div class="hotline-tip2">
+                <span></span>
+                <p>热门线路</p>
+                <div></div>
+            </div>
+            <div class="hotline-left col-md-6 col-xs-12">
+                <div class="Hainan">
+                    <a><img src="img/hot1.jpg" alt="" /></a>
+                    <div class="HOT1">
+                        <p class="hot-text11">海南三亚5天4晚,纯玩、晚红树林度假王国</p>
+                        <div class="hot-text12">
+                            <p>海南三亚5天4晚</p>
+                            <p>纯玩、晚红树林度假王国</p>
+                        </div>
+                        <p class="hot-text2">￥</p>
+                        <p class="price">2580</p>
+                        <p class="hot-text2">&nbsp;/人起</p>
+                    </div>
+                </div>
+
+                <div class="Europe">
+                    <a><img src="img/hot2.jpg" alt="" /></a>
+                    <div class="HOT1">
+                        <p class="hot-text11">德法意瑞欧洲4国，ABCD任意线路由您挑选</p>
+                        <div class="hot-text12">
+                            <p>德法意瑞欧洲4国</p>
+                            <p>ABCD任意线路由您挑选</p>
+                        </div>
+                        <p class="hot-text2">￥</p>
+                        <p class="price">7999</p>
+                        <p class="hot-text2">&nbsp;/人起</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hotline-right  col-md-6 col-xs-0">
+                <div class="Bangkok">
+                    <a><img src="img/hot3.jpg" alt="" /></a>
+                    <div class="HOT2">
+                        <p class="hot-text11">曼谷+芭提雅 国际五星，赠送2220大礼包，绝无自费</p>
+                        <p class="hot-text2">￥</p>
+                        <p class="price">2799</p>
+                        <p class="hot-text2">&nbsp;/人起</p>
+                    </div class="HOT2">
+                </div>
+
+                <div class="Japan">
+                    <a><img src="img/hot4.jpg" alt="" /></a>
+                    <div class="HOT2">
+                        <p class="hot-text11">日本本州游 樱花、寿司、温泉、美食</p>
+                        <p class="hot-text2">￥</p>
+                        <p class="price">5399</p>
+                        <p class="hot-text2">&nbsp;/人起</p>
+                    </div>
+                </div>
+
+                <div class="Sri-Lanka">
+                    <a><img src="img/hot5.jpg" alt="" /></a>
+                    <div class="HOT2">
+                        <p class="hot-text11">斯里兰卡7天6晚全景游 保证入住2晚香格里拉</p>
+                        <p class="hot-text2">￥</p>
+                        <p class="price">7999</p>
+                        <p class="hot-text2">&nbsp;/人起</p>
+                    </div>
+                </div>
+            </div>
+            <button class="button5">
+            <p>查看更多 </p>
+            <img src="img/hotR.png" alt="" />
+            </button>
+
+        </div>
+
+        <div class="web-main-hope">
+
+            <div class="hope-tip1">
+                <p class="hope-tip1-C">使命与愿景</p>
+                <p class="hope-tip1-f">让旅游回归本质，体验纯粹旅游</p>
+            </div>
+
+            <div class="hope-tip2">
+                <span></span>
+                <p class="p1">使命与愿景：</p>
+                <p class="p2">让旅游回归本质，体验纯粹旅游</p>
+                <div></div>
+            </div>
+            <div class="hope-img col-md-5 col-xs-11">
+                <img src="img/mission1.jpg" alt="" />
+            </div>
+            <div class="hope-linian  col-md-7 col-xs-12">
+                <div class="linian">
+                    <p class="linian-tip1">服务理念及优势</p>
+                    <p class="linian-tip2">— — 服务理念 — —</p>
+                    <p class="linian-text">“英华逸游” 通过重新打造旅游全程中的产品线路设计、 出行交通方案、陪游向导服务、增值关怀项目等，为客户 提供高品质的旅游体验。英华逸游在泰国、欧洲、等多个国 家拥有丰富的旅游资源，同时致力于给用户提供性价比高的产品和服务。</p>
+                </div>
+            </div>
+
+            <img src="img/mission2.jpg" alt="" class="hezhao" />
+            <div class="hope-youshi">
+                <p class="youshi-tip">— — 服务优势 — —</p>
+                <div class="youshi1">
+                    <img src="img/rorate.png" alt="" class="youshi-img" />
+                    <div class="youshi-imgt">
+                        <img src="img/icon1.png" alt="" class="img1" />
+                        <img src="img/icon11.png" alt="" class="img2" />
+                        <p>品质行程</p>
+                    </div>
+                    <div class="youshi-text">
+                        <p class="youshi-t1">旅游达人精心设计、基于口碑反复打磨,</p>
+                        <p class="youshi-t2">告别人山人海鸡肋景点。</p>
+                        <p class="youshi-t1">全网最好，敢跟任何产品比</p>
+                    </div>
+                </div>
+                <span></span>
+                <div class="youshi2">
+                    <img src="img/rorate.png" alt="" class="youshi-img" />
+                    <div class="youshi-imgt">
+                        <img src="img/icon2.png" alt="" class="img1" />
+                        <img src="img/icon22.png" alt="" class="img2" />
+                        <p>品质行程</p>
+                    </div>
+                    <div class="youshi-text">
+                        <p class="youshi-t1">不推自费，</p>
+                        <p class="youshi-t1">不进垃圾购物店和伪景点</p>
+                    </div>
+                </div>
+                <span></span>
+                <div class="youshi3">
+                    <img src="img/rorate.png" alt="" class="youshi-img" />
+                    <div class="youshi-imgt">
+                        <img src="img/icon3.png" alt="" class="img1" />
+                        <img src="img/icon33.png" alt="" class="img2" />
+                        <p>品质行程</p>
+                    </div>
+                    <div class="youshi-text">
+                        <p class="youshi-t1">独立成团不散拼，</p>
+                        <p class="youshi-t1">只跟亲朋好友一起玩，每天发团</p>
+                    </div>
+                </div>
+                <span></span>
+            </div>
+        </div>
+        <div class="web-bottom1">
+            <div class="partner">
+                <p>合作伙伴</p>
+                <div class="bottomr">
+                    <div class="wang">
+                        <img src="img/xiecheng.png" alt="" />
+                        </br>
+                        <a href="#">携程网</a>
+                    </div>
+                    <div class="wang">
+                        <img src="img/feizhu.png" alt="" />
+                        </br>
+                        <a href="#">阿里飞猪</a>
+                    </div>
+                    <div class="wang">
+                        <img src="img/quna.png" alt="" />
+                        </br>
+                        <a href="#">去哪儿网</a>
+                    </div>
+                    <div class="wang">
+                        <img src="img/suzhou.png" alt="" />
+                        </br>
+                        <a href="#">苏州旅游网</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotplace">
+                <p>热门位置</p>
+                <div class="bottomr">
+                    <a href="#">韩国</a>
+                    <a href="#">日本</a>
+                    <a href="#">菲律宾</a>
+                    <a href="#">越南</a>
+                    <a href="#">老挝</a>
+                    <a href="#">柬埔寨</a>
+                    <a href="#">泰国</a>
+                    <a href="#">马来西亚</a>
+                    <a href="#">新加坡</a>
+                    <a href="#">印度</a>
+                    <a href="#">斯里兰卡</a>
+                    <a href="#">土耳其</a>
+                    <a href="#">阿联酋</a>
+                    <a href="#">西班牙</a>
+                    <a href="#">意大利</a>
+                    <a href="#">希腊</a>
+                    <a href="#">法国</a>
+                    <a href="#">比利时</a>
+                    <a href="#">荷兰</a>
+                    <a href="#">瑞士</a>
+                    <a href="#">奥地利</a>
+                    <a href="#">德国</a>
+                    <a href="#">匈牙利</a>
+                    <a href="#">俄罗斯</a>
+                    <a href="#">捷克</a>
+                    <a href="#">芬兰</a>
+                    <a href="#">葡萄牙</a>
+                    <a href="#">冰岛</a>
+                    <a href="#">美国</a>
+                    <a href="#">加拿大</a>
+                    <a href="#">巴西</a>
+                    <a href="#">阿根廷</a>
+                    <a href="#">澳大利亚</a>
+                    <a href="#">新西兰</a>
+                </div>
+            </div>
+            <div class="mainserve">
+                <p>主要服务</p>
+                <div class="bottomr">
+                    <a href="#">海岛度假</a>
+                    <a href="#">历史文化</a>
+                    <a href="#">探索冒险</a>
+                    <a href="#">美食购物</a>
+                    <a href="#">都市生活</a>
+                    <a href="#">海外游学</a>
+                    <a href="#">邮轮度假</a>
+                    <a href="#">蜜月摄影</a>
+                    <a href="#">亲子乐园</a>
+                </div>
+            </div>
+            <div class="blogroll">
+                <p>友情链接</p>
+                <div class="bottomr">
+                    <a href="#">马蜂窝</a>
+                    <a href="#">穷游</a>
+                    <a href="#">booking</a>
+                    <a href="#">苏州旅游局</a>
+                    <a href="#">驴友网</a>
+                    <a href="#">吾爱全球旅游中心</a>
+                    <a href="#">酒店团购</a>
+                    <a href="#">携程旅游攻略</a>
+                    <a href="#">天巡直航在线</a>
+                    <a href="#">满天飞旅游网</a>
+                    <a href="#">中国旅游网</a>
+                    <a href="#">澳乐网</a>
+                    <a href="#">背包兔旅游行程</a>
+                    <a href="#">出境旅游</a>
+                    <a href="#">国际酒店</a>
+                    <a href="#">广州旅行社</a>
+                    <a href="#">出境旅游</a>
+                    <a href="#">517旅行</a>
+                    <a href="#">花生游</a>
+                    <a href="#">家园网</a>
+                    <a href="#">海外婚礼</a>
+                </div>
+            </div>
+            <span></span>
+            <h1 class="banquan">2020&nbsp;&nbsp;@苏州英华国际旅游有限公司&nbsp;版权所有</h1>
+        </div>
+
+        <div class="web-bottom2">
+            <p>苏ICP备号、2020</p>
+            <p>@苏州英华国际旅游有限公司 版权所有</p>
+            <p>技术支持 杭州科技</p>
+        </div>
+
+    </div>
+</body>
+
+
+</html>
